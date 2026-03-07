@@ -40,18 +40,20 @@ body {
     align-items: center;
     background: var(--color-primary);
     padding: 1rem 2rem;
+    position: relative;
 }
 
 .logo {
     color: white;
-    font-weight: 600;
+    font-weight: 2px;
     font-size: 1.5rem;
+    text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.5rem;
+    gap: 20px;
     align-items: center;
 }
 
@@ -73,9 +75,19 @@ body {
     color: white;
     cursor: pointer;
 }
+
 .dropdown {
     position: relative;
 }
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+
+}
+
 .dropdown-menu {
     position: absolute;
     top: 100%;
@@ -88,12 +100,15 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
+
 .dropdown-menu li {
     padding: 8px 15px;
 }
+
 .dropdown-menu li a {
     color: #333;
 }
+
 .dropdown-menu li:hover {
     background: #f2f2f2;
 }
@@ -103,10 +118,11 @@ body {
     display: block;
     transition: 0.3s;
 }
+
 /* Menu móvil desplegable */
 .menu-toggle {
     display: none;
-    font-size: 24px;
+    font-size: 26px;
     color: white;
     cursor: pointer;
 }
@@ -149,7 +165,7 @@ body {
 .products {
     padding: 4rem 2rem;
     text-align: center;
-    
+
 }
 
 .product-grid {
@@ -181,11 +197,11 @@ body {
     object-fit: fill;
     border-radius: 12px;
     margin-bottom: 1rem;
-    
+
 }
 
 .product-card .btn {
-    color: #121212;
+    color: var(--bg-color);
     padding: .5%;
 }
 
@@ -202,6 +218,27 @@ body {
 
 .btn:hover {
     background: var(--color-secondary);
+}
+
+.dark-mode {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+.dark-mode .navbar {
+    color: var(--color-primary);
+}
+.dark-mode .services .card{
+    background: var(--color-primary);
+}
+.dark-mode .hero {
+    background: #1e1e1e;
+}
+
+.dark-mode .product-card {
+    background: #1e1e1e;
+  
+    border: 3px solid var(--bg-color);
 }
 
 /* CTA */
@@ -282,12 +319,15 @@ footer {
         top: 60px;
         left: 0;
         width: 100%;
+        flex-direction: column;
         background: var(--color-primary);
         padding: 20px;
     }
-    .nav-links.active {
+
+    .nav-links.show {
         display: flex;
     }
+
     .menu-toggle {
         display: block;
     }

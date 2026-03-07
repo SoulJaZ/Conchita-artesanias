@@ -132,3 +132,4 @@ async function loadProduct() {
 
 // Ejecutar función
 loadProduct();
+

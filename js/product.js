@@ -1,6 +1,8 @@
 // Esperar a que cargue la página
 document.addEventListener("DOMContentLoaded", loadProducts);
 
+
+
 async function loadProducts() {
 
   try {
@@ -48,3 +50,10 @@ async function loadProducts() {
   }
 
 }
+  // Menú móvil.
+      const toogle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".nav-links");
+
+      toogle.addEventListener("click", () => {
+        nav.classList.toggle("show")
+      })

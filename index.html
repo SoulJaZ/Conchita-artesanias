@@ -3,39 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Shop | COCHUELO</title>
-    <!-- Google Font (Punto extra) -->
+
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header>
-      <nav class="navbar">
-        <div class="logo">ArtesaniasCochuelo</div>
-        <ul class="nav-links">
-          <li><a href="index.html">Inicio</a></li>
 
-          <li class="dropdown">
-            <a href="#">Productos</a>
-            <ul class="dropdown-menu">
-              <li><a href="productos.html">Todos</a></li>
-              <li><a href="productos.html?cat=manillas">Manillas</a></li>
-              <li><a href="productos.html?cat=collares">Collares</a></li>
-              <li><a href="productos.html?cat=aretes">Aretes</a></li>
-            </ul>
-          </li>
-          <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li>
-            <button class="toggle-btn" id="toggle-theme">Modo Oscuro</button>
-          </li>
-        </ul>
-        <div class="menu-toggle">☰</div>
-      </nav>
-    </header>
+  <body>
+    <header id="navbar-container"></header>
+
     <section class="hero">
       <h1>Artesanías Cochuelo | Accesorios Hechos a Mano</h1>
       <p>Aretes, manillas y ropa tejida artesanal con diseños únicos.</p>
@@ -46,56 +26,55 @@
         <h3>Personalización</h3>
         <p>Diseñamos accesorios personalizados a tu gusto.</p>
       </div>
+
       <div class="card">
         <h3>Envíos Locales</h3>
         <p>Realizamos envíos seguros a todo el país.</p>
       </div>
+
       <div class="card">
         <h3>Pedidos al por Mayor</h3>
         <p>Descuentos especiales para compras grandes.</p>
       </div>
     </section>
+
     <section class="products">
       <h2>Productos Destacados</h2>
 
       <div class="product-grid">
         <div class="product-card">
           <img src="./imagenes/Aretes1.jpeg" alt="Aretes artesanales" />
+
           <h3>Aretes Florales</h3>
           <p>$15 USD</p>
-          <a class="btn" href="product-detail.html?id=collar-madera">Ver más</a>
+
+          <a class="btn" href="product-detail.html?id=collar-madera">
+            Ver más
+          </a>
         </div>
 
         <div class="product-card">
           <img src="./imagenes/Aretes1-V2.jpeg" alt="Manilla tejida" />
+
           <h3>Manilla Multicolor</h3>
           <p>$12 USD</p>
-          <a class="btn" href="product-detail.html?id=manilla-multicolor"
-            >Ver más</a
-          >
+
+          <a class="btn" href="product-detail.html?id=manilla-multicolor">
+            Ver más
+          </a>
         </div>
       </div>
     </section>
 
     <section class="cta">
-      <a class="btn" href="productos.html"> Ver Todos los Productos </a>
+      <a class="btn" href="productos.html">Ver Todos los Productos</a>
     </section>
 
     <footer>
       <p>© 2026 Artesanias Cochuelo - Todos los derechos reservados</p>
     </footer>
-    <script>
-      document.getElementById("toggle-theme").addEventListener("click", () => {
-        document.body.toggleAttribute("data-theme");
-      });
-
-      // Menú móvil.
-      const toogle = document.querySelector(".menu-toggle");
-      const nav = document.querySelector(".nav-links");
-
-      toogle.addEventListener("click", () => {
-        nav.classList.toggle("active")
-      })
+    <script src="./js/products.js">
     </script>
+    <script src="js/navbar.js"></script>
   </body>
 </html>
