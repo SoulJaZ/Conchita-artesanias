@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detalle del Producto</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #7b3f00;
+        --secondary: #f5e6d3;
+        --dark: #1e1e1e;
+        --light: #ffffff;
+        --bg-color: #fefae0;
+        --color-primary: #6a0572;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: radial-gradient(
+          circle,
+          var(--bg-color) 0%,
+          var(--color-primary) 100%
+        );
+        color: var(--dark);
+        min-height: 100vh;
+      }
+
+      /* NAVBAR */
+
+      .navbar {
+        padding: 18px;
+        background: var(--light);
+        border-bottom: 1px solid #eee;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .navbar a {
+        text-decoration: none;
+        color: var(--primary);
+      }
+
+      /* MAIN */
+
+      main {
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* PRODUCT */
+
+      .product-container {
+        background: var(--light);
+        border-radius: 16px;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+      }
+
+      /* IMAGE GALLERY */
+
+      .product-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .main-image {
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .thumbnail-container {
+        display: flex;
+        gap: 10px;
+      }
+
+      .thumbnail {
+        width: 70px;
+        height: 70px;
+        object-fit: cover;
+        border-radius: 6px;
+        cursor: pointer;
+        border: 2px solid transparent;
+      }
+
+      .thumbnail:hover {
+        border-color: var(--primary);
+      }
+
+      /* INFO */
+
+      .product-info h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      .price {
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: var(--primary);
+        margin: 10px 0;
+      }
+
+      .description {
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+
+      .attributes {
+        list-style: none;
+        margin-bottom: 20px;
+      }
+
+      .attributes li {
+        background: var(--secondary);
+        padding: 8px 12px;
+        border-radius: 6px;
+        margin-bottom: 8px;
+      }
+
+      /* BUTTON */
+
+      .btn {
+        background: var(--primary);
+        color: var(--light);
+        padding: 14px 22px;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        border-radius: 8px;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      /* RELATED PRODUCTS */
+
+      .related-products {
+        margin-top: 60px;
+      }
+
+      .related-products h2 {
+        margin-bottom: 25px;
+      }
+
+      .related-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .related-card {
+        background: var(--light);
+        padding: 20px;
+        border-radius: 12px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .related-card img {
+        width: 100%;
+        border-radius: 8px;
+        margin-bottom: 10px;
+      }
+
+      .related-card h4 {
+        margin-bottom: 5px;
+      }
+
+      /* DESKTOP */
+
+      @media (min-width: 768px) {
+        .product-container {
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+        }
+      }
+
+      /* DARK MODE */
+
+      @media (prefers-color-scheme: dark) {
+        body {
+          background: #121212;
+          color: #f1f1f1;
+        }
+
+        .product-container,
+        .related-card {
+          background: #1e1e1e;
+        }
+
+        .navbar {
+          background: #1e1e1e;
+        }
+
+        .attributes li {
+          background: #2b2b2b;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="navbar">
+      <a href="productos.html">← Volver a la tienda</a>
+    </header>
+
+    <main>
+      <!-- DETALLE PRODUCTO -->
+
+      <section class="product-container">
+        <div class="product-gallery">
+          <img id="productImage" class="main-image" src="" alt="" />
+
+          <div class="thumbnail-container" id="thumbnailContainer">
+            <!-- JS inserta miniaturas -->
+          </div>
+        </div>
+
+        <div class="product-info">
+          <h1 id="productName"></h1>
+
+          <p id="productPrice" class="price"></p>
+
+          <p id="productDescription" class="description"></p>
+
+          <ul id="productAttributes" class="attributes"></ul>
+
+          <button class="btn">Comprar ahora</button>
+        </div>
+      </section>
+
+      <!-- PRODUCTOS RELACIONADOS -->
+
+      <section class="related-products">
+        <h2>Productos relacionados</h2>
+
+        <div id="relatedProducts" class="related-grid">
+          <!-- JS inserta productos -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/products.js"></script>
+  </body>
+</html>

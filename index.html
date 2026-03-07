@@ -1,170 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Personal Portfolio Web</title>
-     <!-- Google Font (Punto extra) -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      /* VARIABLES */
-      :root {
-        --color-primary: #0b2545;
-        --color-secundary: #0077ff;
-        --bg-color: #ffffff;
-        --text-color: #222;
-      }
-      body {
-        font-family: "Popins", sans-serif;
-        background: var(--bg-color);
-        color: var(--text-color);
-        line-height: 1.6;
-      }
-
-      /* NAVBAR */
-      .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--color-primary);
-        padding: 1rem 2rem;
-      }
-      .logo {
-        color: white;
-        font-weight: 600;
-        font-size: 1.5rem;
-      }
-      .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 1.5rem;
-      }
-      .nav-links a {
-        color: white;
-        text-decoration: none;
-        transition: 0.3s;
-      }
-      .nav-links a:hover {
-        color: var(--color-secundary);
-      }
-
-      /* HERO */
-      .hero {
-        padding: 4rem 2rem;
-        text-align: center;
-        background: #f4f4f4;
-      }
-
-      /* SERVICIOS */
-      .services {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        padding: 3rem 2rem;
-      }
-      .card {
-        background: white;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        flex: 1;
-        text-align: center;
-      }
-
-      /* CONTACTO */
-      .contact {
-        padding: 3rem 2rem;
-        background: #f9f9f9;
-        text-align: center;
-      }
-
-      form {
-        max-width: 500px;
-        margin: 2rem auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-      input,
-      textarea {
-        padding: 0.8rem;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-      }
-      button {
-        padding: 0.8rem;
-        border: none;
-        background: var(--color-primary);
-        color: white;
-        cursor: pointer;
-        border-radius: 6px;
-        transition: 0.3s;
-      }
-
-      button:hover {
-        background: var(--color-secondary);
-      }
-      footer {
-        background: var(--color-primary);
-        color: white;
-        text-align: center;
-        padding: 1rem;
-      }
-      /* RESPONSIVE */
-      @media (max-width: 768px) {
-        .nav-links {
-            flex-direction: column;
-            align-items: center;
-        }
-        .services {
-            flex-direction: column;
-        }
-        .card {
-            width: 100%;
-        }
-      }
-    </style>
+    <title>Shop | COCHUELO</title>
+    <!-- Google Font (Punto extra) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <div class="logo">MiSitio</div>
+        <div class="logo">ArtesaniasCochuelo</div>
         <ul class="nav-links">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Servicios</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Producto</a></li>
+          <li><a href="sobre-nosotros.html">Sobre nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li>
+            <button class="toggle-btn" id="toggle-theme">Modo Oscuro</button>
+          </li>
         </ul>
       </nav>
     </header>
     <section class="hero">
-      <h1>Bienvenido a mi sitio web</h1>
-      <p>Diseño adaptable utilizando Flexbox y Media Queries.</p>
+      <h1>Artesanías Cochuelo | Accesorios Hechos a Mano</h1>
+      <p>Aretes, manillas y ropa tejida artesanal con diseños únicos.</p>
     </section>
 
     <section class="services">
-      <div class="card">Service 1</div>
-      <div class="card">Service 2</div>
-      <div class="card">Service 3</div>
+      <div class="card">
+        <h3>Personalización</h3>
+        <p>Diseñamos accesorios personalizados a tu gusto.</p>
+      </div>
+      <div class="card">
+        <h3>Envíos Locales</h3>
+        <p>Realizamos envíos seguros a todo el país.</p>
+      </div>
+      <div class="card">
+        <h3>Pedidos al por Mayor</h3>
+        <p>Descuentos especiales para compras grandes.</p>
+      </div>
     </section>
-    <section class="contact">
-      <h2>Contacto</h2>
-      <form action="">
-        <input type="text" placeholder="Nombre" />
-        <input type="email" placeholder="Correo" />
-        <textarea placeholder="mensaje"></textarea>
+    <section class="products">
+      <h2>Productos Destacados</h2>
 
-        <button type="submit">Enviar</button>
-      </form>
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="./imagenes/Aretes1.jpeg" alt="Aretes artesanales" />
+          <h3>Aretes Florales</h3>
+          <p>$15 USD</p>
+           <a class="btn" href="product-detail.html?id=collar-madera">Ver más</a>
+          
+        </div>
+
+        <div class="product-card">
+          <img src="./imagenes/Aretes1-V2.jpeg" alt="Manilla tejida" />
+          <h3>Manilla Multicolor</h3>
+          <p>$12 USD</p>
+          <a class="btn" href="product-detail.html?id=manilla-multicolor">Ver más</a>
+        </div>
+      </div>
+    </section>
+    
+    <section class="cta">
+      <a class="btn" href="productos.html">
+        Ver Todos los Productos
+      </a>
     </section>
 
     <footer>
-      <p>© 2026 MiSitio - Todos los derechos reservados</p>
+      <p>© 2026 Artesanias Cochuelo - Todos los derechos reservados</p>
     </footer>
+    <script>
+      document.getElementById("toggle-theme").addEventListener("click", () => {
+        document.body.toggleAttribute("data-theme");
+      });
+    </script>
   </body>
 </html>

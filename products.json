@@ -1,0 +1,37 @@
+[
+  {
+    "id": "manilla-multicolor",
+    "name": "Manilla Multicolor",
+    "price": 35000,
+    "currency": "COP",
+    "images": [
+      "./imagenes/Aretes1-V2.jpeg",
+      "./imagenes/Aretes1-V2.jpeg",
+      "./imagenes/Aretes1-V2.jpeg"
+    ],
+    "description": "Manilla tejida a mano con hilos encerados de colores.",
+    "attributes": [
+      "Hecho a mano",
+      "Material ecológico",
+      "Producción limitada",
+      "Tiempo de entrega: 3-5 días"
+    ]
+  },
+  {
+    "id": "collar-madera",
+    "name": "Collar Artesanal de Madera",
+    "price": 45000,
+    "currency": "COP",
+    "images": [
+      "./imagenes/Aretes2-V2.jpeg",
+      "./imagenes/Aretes2-V2.jpeg",
+      "./imagenes/Aretes2-V2.jpeg"
+    ],
+    "description": "Collar elaborado con madera reciclada.",
+    "attributes": [
+      "Madera natural",
+      "Diseño único",
+      "Hecho en Colombia"
+    ]
+  }
+]
