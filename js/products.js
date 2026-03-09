@@ -111,8 +111,8 @@ async function loadProduct() {
           <img src="${item.images[0]}" alt="${item.name}">
           <h4>${item.name}</h4>
           <p>${item.currency} ${item.price.toLocaleString()}</p>
-          <a href="product-detail.html?id=${item.id}">
-            <button class="btn">Ver producto</button>
+          <a class="btn" href="product-detail.html?id=${item.id}">
+           Ver producto
           </a>
         `;
 

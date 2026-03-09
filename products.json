@@ -5,7 +5,7 @@
     "price": 35000,
     "currency": "COP",
     "images": [
-      "./imagenes/Aretes1-V2.jpeg",
+      "./imagenes/Manillas1.png",
       "./imagenes/Aretes1-V2.jpeg",
       "./imagenes/Aretes1-V2.jpeg"
     ],
@@ -19,11 +19,79 @@
   },
   {
     "id": "collar-madera",
-    "name": "Collar Artesanal de Madera",
+    "name": "Collar Artesanal de Mostacilla",
     "price": 45000,
     "currency": "COP",
     "images": [
+      "./imagenes/Collar1.jpg",
       "./imagenes/Aretes2-V2.jpeg",
+      "./imagenes/Aretes2-V2.jpeg"
+    ],
+    "description": "Collar elaborado con madera reciclada.",
+    "attributes": [
+      "Madera natural",
+      "Diseño único",
+      "Hecho en Colombia"
+    ]
+  },
+   {
+    "id": "aretes-mostacilla",
+    "name": "Aretes Mostacilla Flor Azul",
+    "price": 45000,
+    "currency": "COP",
+    "images": [
+      "./imagenes/aretes2.png",
+      "./imagenes/Aretes2-V2.jpeg",
+      "./imagenes/Aretes2-V2.jpeg"
+    ],
+    "description": "Collar elaborado con madera reciclada.",
+    "attributes": [
+      "Madera natural",
+      "Diseño único",
+      "Hecho en Colombia"
+    ]
+  },
+   {
+    "id": "aretes-mostacilla-2",
+    "name": "Aretes Mostacilla Flor Azul Sencilla",
+    "price": 45000,
+    "currency": "COP",
+    "images": [
+      "./imagenes/aretes3.jpg",
+      "./imagenes/Aretes2-V2.jpeg",
+      "./imagenes/Aretes2-V2.jpeg"
+    ],
+    "description": "Collar elaborado con madera reciclada.",
+    "attributes": [
+      "Madera natural",
+      "Diseño único",
+      "Hecho en Colombia"
+    ]
+  },
+   {
+    "id": "manilla-multicolor-2",
+    "name": "Manilla Multicolor",
+    "price": 45000,
+    "currency": "COP",
+    "images": [
+      "./imagenes/Manillas2.png",
+      "./imagenes/Aretes2-V2.jpeg",
+      "./imagenes/Aretes2-V2.jpeg"
+    ],
+    "description": "Collar elaborado con madera reciclada.",
+    "attributes": [
+      "Madera natural",
+      "Diseño único",
+      "Hecho en Colombia"
+    ]
+  },
+   {
+    "id": "manilla-multicolor-3",
+    "name": "Manilla Multicolor",
+    "price": 45000,
+    "currency": "COP",
+    "images": [
+      "./imagenes/Manillas3.png",
       "./imagenes/Aretes2-V2.jpeg",
       "./imagenes/Aretes2-V2.jpeg"
     ],

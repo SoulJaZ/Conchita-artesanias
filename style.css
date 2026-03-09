@@ -31,6 +31,10 @@ body {
     font-family: "Poppins", sans-serif;
     color: var(--text-color);
     line-height: 1.6;
+    height: 100%;
+}
+main {
+    flex: 1;
 }
 
 /* NAVBAR */
@@ -228,10 +232,12 @@ body {
 .dark-mode .navbar {
     color: var(--color-primary);
 }
-.dark-mode .services .card{
+
+.dark-mode .services .card {
     background: var(--color-primary);
     border: 3px solid var(--bg-color);
 }
+
 .dark-mode .hero {
     background: #1e1e1e;
 }
@@ -240,8 +246,49 @@ body {
     background: #1e1e1e;
     border: 3px solid var(--bg-color);
 }
+
 .dark-mode .btn {
-    border: 3px solid var(--bg-color);  
+    border: 3px solid var(--bg-color);
+}
+
+.dark-mode .about-header h1 {
+    color: var(--color-secondary);
+    
+}
+
+.dark-mode .about-text h2 {
+    color: var(--color-secondary);
+}
+
+.dark-mode .about-header p {
+    
+    color: var(--color-accent);
+}
+
+.dark-mode .value-card p {
+    color: var(--text-color);
+}
+
+.dark-mode .about-text p {
+    color: var(--color-accent);
+}
+.dark-mode .about-text {
+    border-radius: 14px;
+    border: 3px solid var(--bg-color);
+}
+
+.dark-mode .values {
+    border-radius: 14px;
+    border: 3px solid var(--bg-color);
+}
+
+.dark-mode .about-image img {
+    border-radius: 14px;
+    border: 3px solid var(--bg-color);
+}
+
+.dark-mode .values h2 {
+    color: var(--color-secondary);
 }
 
 
@@ -289,24 +336,120 @@ button:hover {
     background: var(--color-secondary);
 }
 
-/* ABOUT */
-.about-content {
-    display: flex;
-    gap: 2rem;
-    align-items: center;
-    margin-top: 2rem;
+/* =========================
+   ABOUT PAGE
+========================= */
+
+.about {
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px 20px;
 }
 
-.about-content img {
-    width: 50%;
-    border-radius: 12px;
+.about-header {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.about-header h1 {
+    font-size: 2.6rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    color: var(--text-color);
+    opacity: 1;
+}
+
+/* CONTENIDO */
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.about-text p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* =========================
+   VALUES
+========================= */
+
+.values {
+    max-width: 1100px;
+    margin: 80px auto;
+
+    padding: 0 20px;
+    text-align: center;
+}
+
+.values h2 {
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(1, 1fr));
+    gap: 25px;
+}
+
+.value-card {
+    background: var(--color-accent);
+    padding: 30px 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease;
+    margin-bottom: 10px;
+}
+
+.value-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+
+}
+
+.value-card h3 {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    color: var(--text-color);
 }
 
 footer {
     background: var(--color-primary);
     color: white;
     text-align: center;
-    padding: 1rem;
+    padding: 20px;
+    margin-top: auto;
 }
 
 /* RESPONSIVE */
@@ -350,6 +493,15 @@ footer {
 
     .about-content {
         flex-direction: column;
+        text-align: center;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .value-card {
+        padding: 25px 20px;
     }
 
     .about-content img {

@@ -34,8 +34,8 @@ async function loadProducts() {
 
         <p>${product.description}</p>
 
-        <a href="product-detail.html?id=${product.id}">
-          <button class="btn">Ver más</button>
+        <a class="btn" href="product-detail.html?id=${product.id}">
+        Ver más
         </a>
       `;
 

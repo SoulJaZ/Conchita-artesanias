@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
 
     <style>
       * {
@@ -19,7 +20,7 @@
 
       :root {
         --primary: #6a0572;
-        --secondary: #f5e6d3;
+        --secondary: #ff4d6d;
         --dark: #1e1e1e;
         --light: #ffffff;
         --bg-color: #fefae0;
@@ -131,29 +132,31 @@
       }
 
       .attributes li {
-        background: var(--secondary);
+        background: var(--bg-color);
         padding: 8px 12px;
         border-radius: 6px;
         margin-bottom: 8px;
       }
 
       /* BUTTON */
+      .product-info .btn {
+        color: var(--bg-color);
+        padding: 1%;
+      }
 
       .btn {
-        background: var(--primary);
-        color: var(--light);
-        padding: 14px 22px;
+        padding: 1rem 1rem;
+        text-decoration: none;
         border: none;
+        background: var(--color-primary);
+        color: white;
+        border-radius: 6px;
         cursor: pointer;
-        font-size: 1rem;
-        border-radius: 8px;
-        font-weight: 600;
-        transition: 0.2s;
+        transition: 0.3s;
       }
 
       .btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        background: var(--secondary);
       }
 
       /* PRODUCTOS RELACIONADOS */
@@ -183,11 +186,20 @@
       .related-card img {
         width: 100%;
         border-radius: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
       }
 
       .related-card h4 {
         margin-bottom: 5px;
+      }
+
+      .related-card .btn {
+        color: var(--bg-color);
+        padding: 0.5%;
+      }
+
+      .related-card .btn:hover {
+        background: var(--secondary);
       }
 
       /* DESKTOP */
@@ -200,26 +212,6 @@
       }
 
       /* DARK MODE */
-
-      @media (prefers-color-scheme: dark) {
-        body {
-          background: #121212;
-          color: #f1f1f1;
-        }
-
-        .product-container,
-        .related-card {
-          background: #1e1e1e;
-        }
-
-        .navbar {
-          background: #1e1e1e;
-        }
-
-        .attributes li {
-          background: #2b2b2b;
-        }
-      }
     </style>
   </head>
 
@@ -249,7 +241,7 @@
 
           <ul id="productAttributes" class="attributes"></ul>
 
-          <button class="btn">Comprar ahora</button>
+          <a class="btn">Comprar ahora</a>
         </div>
       </section>
 
