@@ -230,6 +230,7 @@ body {
 }
 .dark-mode .services .card{
     background: var(--color-primary);
+    border: 3px solid var(--bg-color);
 }
 .dark-mode .hero {
     background: #1e1e1e;
@@ -237,9 +238,12 @@ body {
 
 .dark-mode .product-card {
     background: #1e1e1e;
-  
     border: 3px solid var(--bg-color);
 }
+.dark-mode .btn {
+    border: 3px solid var(--bg-color);  
+}
+
 
 /* CTA */
 .cta {
